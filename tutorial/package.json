@@ -3,7 +3,9 @@
     "private": true,
     "sideEffects": false,
     "type": "module",
+    "packageManager": "bun@1.1.2",
     "scripts": {
+        "postinstall": "corepack enable && corepack enable npm && rm -rf node_modules/ && rm -f package-lock.json",
         "build": "remix vite:build",
         "dev": "remix vite:dev",
         "start": "remix-serve build/server/index.js",
