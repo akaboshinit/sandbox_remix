@@ -7,4 +7,15 @@ installGlobals();
 
 export default defineConfig({
   plugins: [remix(), tsconfigPaths()],
+  define: {
+    global: {},
+  },
+  server: {
+    port: 3000,
+  },
+  resolve: {
+    alias: {
+      "./runtimeConfig": "./runtimeConfig.browser",
+    },
+  },
 });
